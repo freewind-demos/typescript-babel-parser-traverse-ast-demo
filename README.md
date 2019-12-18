@@ -1,18 +1,9 @@
-TypeScript Hello World Demo
-===========================
+TypeScript Babel Parser Parse to AST Demo
+=========================================
+
+使用`@babel/parser`将一段javascript代码解析成AST树。
 
 ```
 npm install
 npm run demo
 ```
-
-Note:
-
-`esModuleInterop` is recommended to set to `true`,
-since we can have consistent importing syntax with babel,
-always use:
-
-```
-import some from 'some'
-```
-

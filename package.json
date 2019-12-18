@@ -3,6 +3,8 @@
     "demo": "ts-node hello.ts"
   },
   "devDependencies": {
+    "@babel/parser": "7.7.5",
+    "@babel/types": "7.7.4",
     "@types/node": "8.9.5",
     "ts-node": "7.0.1",
     "typescript": "3.2.2"
