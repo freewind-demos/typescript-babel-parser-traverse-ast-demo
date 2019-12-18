@@ -1,9 +1,17 @@
-import {parse} from '@babel/parser'
+import * as parser from "@babel/parser";
+import traverse from "@babel/traverse";
 
-const ast = parse(`
-function hello(name) {
-  console.log(\`Hello, \${name}!\`)
-}
-`,);
+const code = `function square(n) {
+  return n * n;
+}`;
 
-console.log(JSON.stringify(ast, null, 4))
+const ast = parser.parse(code);
+
+traverse(ast, {
+  enter: (path) => {
+    console.log('### path:', path.toString());
+    if (path.isIdentifier({name: "n"})) {
+      path.node.name = "x";
+    }
+  }
+});

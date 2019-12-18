@@ -1,7 +1,7 @@
-TypeScript Babel Parser Parse to AST Demo
+TypeScript Babel Parser Traverse AST Demo
 =========================================
 
-使用`@babel/parser`将一段javascript代码解析成AST树。
+使用`@babel/traverse`遍历由`@babel/parser`解析出来的AST
 
 ```
 npm install
